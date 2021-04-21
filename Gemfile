@@ -38,6 +38,8 @@ group :development, :test do
   gem 'capybara'
   # Factory Bot hearts Rails
   gem 'factory_bot_rails'
+  # A runtime developer console and IRB alternative with powerful introspection capabilities.
+  gem 'pry', '~> 0.13.1'
 end
 
 group :development do

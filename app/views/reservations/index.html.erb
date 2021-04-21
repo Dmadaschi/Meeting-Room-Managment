@@ -1,0 +1,19 @@
+<div class="container">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Horário</th>
+        <th scope="col">Segunda</th>
+        <th scope="col">Terça</th>
+        <th scope="col">Quarta</th>
+        <th scope="col">Quinta</th>
+        <th scope="col">Sexta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for time in 6..23 do %>
+        <%= render partial: 'time_row', locals: { time: "#{time}:00" }%>
+      <% end %>
+    </tbody>
+  </table>
+</div>
