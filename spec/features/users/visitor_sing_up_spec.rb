@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User Sing' do
+feature 'User Sing up' do
   scenario 'successfully' do
     visit new_user_registration_path
 

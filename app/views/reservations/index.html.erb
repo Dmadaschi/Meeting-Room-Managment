@@ -1,13 +1,22 @@
-<div class="container">
+<div class="container-fluid">
+  <div class="text-center">
+    <%= link_to "Semana anterior",
+        root_path({ week: @week, operation: 'last' }),
+        class: "btn btn-secondary" %>
+    <%= link_to "Semana atual", root_path, class: "btn btn-secondary" %> 
+    <%= link_to "Proxima semana",
+        root_path({ week: @week, operation: 'next' }),
+        class: "btn btn-secondary" %> 
+  </div>
   <table class="table table-bordered">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Horário</th>
-        <th scope="col">Segunda</th>
-        <th scope="col">Terça</th>
-        <th scope="col">Quarta</th>
-        <th scope="col">Quinta</th>
-        <th scope="col">Sexta</th>
+        <th scope="col">Segunda - <%= @week[0] %></th>
+        <th scope="col">Terça - <%= @week[1] %></th>
+        <th scope="col">Quarta - <%= @week[2] %></th>
+        <th scope="col">Quinta - <%= @week[3] %></th>
+        <th scope="col">Sexta - <%= @week[4] %></th>
       </tr>
     </thead>
     <tbody>
