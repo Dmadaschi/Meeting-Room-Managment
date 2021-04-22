@@ -35,7 +35,7 @@ feature 'User view reservations' do
       expect(page).to have_content('21:00')
       expect(page).to have_content('22:00')
       expect(page).to have_content('23:00')
-      expect(page).to have_content('Disponivel')
+      expect(page).to have_button('Disponivel')
     end
   end
 

@@ -1,8 +1,28 @@
 <tr>
-  <th scope="row"><%= time %></th>
-  <td><%= link_to "Disponivel", root_path %></td>
-  <td><%= link_to "Disponivel", root_path %></td>
-  <td><%= link_to "Disponivel", root_path %></td>
-  <td><%= link_to "Disponivel", root_path %></td>
-  <td><%= link_to "Disponivel", root_path %></td>
+  <th scope="row"><%= "#{time}:00" %></th>
+  <td>
+    <%= button_to "Disponivel",
+        reservations_path({ day: @week[0], time: time }),
+        id: "#{time}-0-link", class: "btn btn-link" %>
+  </td>
+  <td>
+    <%= button_to "Disponivel",
+        reservations_path({ day: @week[1], time: time }),
+        id: "#{time}-1-link", class: "btn btn-link" %>
+  </td>
+  <td>
+    <%= button_to "Disponivel",
+        reservations_path({ day: @week[2], time: time }),
+        id: "#{time}-2-link", class: "btn btn-link" %>
+  </td>
+  <td>
+    <%= button_to "Disponivel",
+        reservations_path({ day: @week[3], time: time }),
+        id: "#{time}-3-link", class: "btn btn-link" %>
+  </td>
+  <td>
+    <%= button_to "Disponivel",
+        reservations_path({ day: @week[4], time: time }),
+        id: "#{time}-4-link", class: "btn btn-link" %>
+  </td>
 </tr>

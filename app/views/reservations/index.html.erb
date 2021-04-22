@@ -21,7 +21,7 @@
     </thead>
     <tbody>
       <% for time in 6..23 do %>
-        <%= render partial: 'time_row', locals: { time: "#{time}:00" }%>
+        <%= render partial: 'time_row', locals: { time: time } %>
       <% end %>
     </tbody>
   </table>
